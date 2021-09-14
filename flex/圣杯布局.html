@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+        min-width: 550px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #header,#footer{
+        background-color: beige;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+    }
+    #container{
+        display: flex;
+    }
+    #left,#right{
+        background-color: skyblue;
+        text-align: center;
+        width: 350px;
+        height: 100px;
+        line-height: 100px;
+    }
+    #center{
+        background-color: orange;
+        flex: 1;
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+<div id="header">#header</div>
+<div id="container">
+  <div id="left">left</div>
+  <div id="center">center</div>
+  <div id="right">right</div>
+</div>
+<div id="footer">#footer</div>
+</body>
+</html>

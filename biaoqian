@@ -1,0 +1,162 @@
+《p》段落标签
+
+<br/> 换行标签 强制换行
+
+《strong》 文字加粗标签
+
+《em》 倾斜文字
+
+《del》删除线
+
+《ins》下划线
+
+<img src=""/>图片标签 (alt 图像不能正常显示时替换显示的文字 title 鼠标放到图像上 显示的文字    border 图像的边框粗细  width 设置宽度  height:高度 ）
+
+《a href 链接目标的url地址  target：指定链接页面的打开方式，其中_self为默认值，_blank为在新窗口中打开方式》
+
+锚点链接 ：
+        在链接文本的href属性中 设置属性值为  #名字  如<a href="#two">第二集</a>
+        找到目标位置标签 里面添加一个id属性=刚才的名字 如 <h3 id="two"> 第二集介绍</h3>
+
+&nbsp; 空格  &it; <     &gt; >
+
+    <table>  表格
+        <tr> <th></th> <th></th> <th></th> 表头单元格 文字会加粗并居中 </tr>
+        <tr>   行
+            <td> </td>   <td> </td>  <td> </td>行中的单元格
+        </tr>
+    <table>
+    cellpadding 文字距表格边框的距离 默认为1像素   cellspacing 单元格之间的空白距离默认为2像素  border 1或“” 规定表格是否有边框
+
+《《li》ul》 无序列表
+《《li》ol》 有序列表
+ <dl>
+    <dt>aaaaa</dt> 定义项目/名字
+    <dd>bbbbb</dd>  描述每一个项目/名字       自定义列表
+    <dd>bbbbb</dd>
+    <dd>bbbbb</dd>
+ </dl>
+
+《form   action(url地址) method（get/post） name》                        (单选和多选可以设置 checked属性 默认选择)
+<input type=""/> (test 文本  password 密码  radio 单选小按钮（单选按钮必须有相同的name）  checkbox 多选小按钮（多选按钮必须有相同的name）)
+               （maxlength 可输入的最大长度  submit 提交按钮可以根据value改变其显示的文字  reset 重置按钮可以还原表单元素初始的默认状态 file上传文件）
+          《label for=""》 <input id ="">
+《select 《option》》 下拉表单
+《textarea》 文本域
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+font-family  定义文本的字体
+font-size  字体大小  浏览器默认16px
+font-weight 字体粗细 正常为400/normal  加粗为700/bold
+font-style  字体变正常normal  字体变倾斜italic
+复合属性  font: font-style  font-weight  font-size/line-height  font-family  顺序不能更换 不需要可以省略 必须保留font-size和font-family
+         font: normal  700  16px  'Microsoft yahei';    font: 20px 'Microsoft yahei';
+
+text-align: center居中对齐   left 左对齐    right右对齐
+text-decoration 装饰文本 默认为none    下划线 underline   line-through 删除线  overline 上划线   （一般用来取消a标签默认的下划线）
+text-indent 首行缩进  一般为2em    em是相对单位 一个文字的大小
+line-height 行间距
+
+对于 <a href="#">成为Kami</a>
+a:link 选择未访问的  a:visited 选择访问过的  a:hover 选择鼠标经过的  a:active 选择鼠标按下但并未弹起的
+为了确保生效 伪类选择器按照  LVHA 的顺序声明
+input:focus 选取获得焦点的表单元素
+
+display:block  将行内元素转换为块级元素   display:inline 将div块级元素转换为行内元素   display:inline-block 行内块级元素
+
+单行文字垂直居中： 使文字的行高等于盒子的高度  height=40px line-height=40px
+
+background-color
+背景图片 background-image: none | url
+北京平铺 background-repeat: repeat| no-repeat | repeat-x | repeat-y  默认情况下 背景图片是平铺的
+background-position: x y;    如果是方位名词 right center 和 center right 是等价的  如果省略一个 被省略的默认为y且为center
+背景图像固定  background-attachment 设置背景图像是否固定或者随着页面的其余部分滚动
+    scroll 背景图像随对象内容滚动（默认）     fixed 背景图像固定
+复合写法 background: 背景颜色 背景图片地址 北京平铺 背景图像滚动 背景图片位置
+半透明效果   background: rgba(0,0,0,0.3);  最后一个参数取值0~1控制透明度  半透明只对背景有影响 对文字没有影响
+
+如果样式冲突遵循就近原则
+子元素可以继承父元素的样式（text-，font-,line-,这些元素开头的可以继承，以及color）
+
+优先级  继承或者* < 元素选择器 < 类选择器，伪类选择器 < ID选择器 < 行内样式 style="" < ！important
+ 注：继承权重最低  a标签的蓝色是元素选择器 继承对他不起作用
+ 负荷选择器会有权重叠加的问题     ul li 权重： 0,0,0,1+0,0,0,1=0,0,02
+
+ border  边框
+        border-width 定义边框粗细，单位px
+        border-style 边框样式   默认为none   solid实线边框  dashed虚线边框  dotted点线边框
+        border-color 边框颜色
+        border-top border-bottom border-left border-right
+        border-collapse: collapse  合并相邻的边框
+     边框的简写  border: 1px solid red;   不分先后顺序
+
+padding  内边距
+        padding-left  padding-right  padding-top  padding-bottom
+        padding: 5px;  如果padding后面只跟一个值 表示padding上下左右都是这个
+        padding: 5px  10px; 上下5 左右10
+        padding: 5px 10px 20px; 上5 左右10 下20
+        padding: 5px 10px 20px 30px; 上5 右10 下20 做30 顺时针
+        如果盒子指定了width/height padding会撑开盒子 需在width/height中减去padding的宽度  如果没有指定则不会撑开
+
+margin  外边距 盒子之间的距离
+       margin-top   margin-left  margin-bottom  margin-right
+       简写同padding
+       外边距可以让 块级盒子 水平居中   要满足两个条件  1、盒子必须指定了宽度(width) 2、盒子左右外边距都设置为auto margin:0 auto
+       行内元素或者行内块元素水平居中给其父元素添加 text-align: center 即可
+       嵌套块元素垂直外边距的塌陷： 1、为父元素定义上边框  2、为父元素定义上内边距 3、为父元素添加overflow:hidden
+       行内元素尽量只设置左右的内外边距
+       清除内外边距
+            *{
+                padding:0;
+                margin:0;
+            }
+
+list-style:none; li前面的小圆点
+
+border-radius:10px; 圆角   （左上角开始顺时针） border-top-left
+圆角矩形 border-radius 设置为高度的一半
+
+box-shadow：10px 10px 10px 10px rgba(0,0,0,0.3)
+            h-shadow 必须 水平阴影位置 允许负值  v-shadow 必须 垂直....  blur 可选 模糊距离  spread 可选 阴影尺寸  color
+text-shadow:h-shadow v-shadow (blur) (color)
+
+flex布局
+flex-direction 设置主轴的方向
+        主轴相当于x轴，默认为 row （从左到右）
+        flex-direction: row-reverse  翻转(从右到左)  简单了解 第一个在最右边
+        flex-direction: column 将主轴设置为y轴 x为副轴 此时从上到下排列
+
+justify-content 设置主轴上的子元素排列方式 ※
+        flex-start 默认值 从头部开始 如果主轴是x轴 则从左到右
+        flex-end 从尾部开始  简单了解  第一个在最左边
+        center 在主轴居中对齐 （如果主轴是x轴 则水平居中）
+        space-around 平分剩余空间
+        space-between 先两边贴边 再平分剩余空间
+flex-wrap 设置子元素是否换行
+        默认子元素不换行，如果装不下会缩小子元素的宽度 放到父元素里面
+        nowrap 默认值 不换行
+        wrap 换行
+align-content 设置侧轴上的子元素的排列方式 并且只能用于子项出现 换行 的情况   单行下是没有效果的（多行）
+        flex-start 默认值 在侧轴的头部开始排列
+        flex-end 在侧轴的尾部开始排列
+        center 在侧轴中间显示
+        space-around 子项在侧轴平分剩余空间
+        space-between 子项在侧轴先分布在两头 再平分剩余空间
+        stretch 设置子项元素高度平分父元素高度
+
+align-items 设置侧轴上的子元素排列方式（单行）
+        flex-start 默认值 从上到下
+        flex-end 从下到上
+        center 挤在一起居中（垂直居中）
+        stretch 拉伸  子盒子不要给高度
+flex-flow 复合属性 相当于同时设置了 flex-direction 和 flex-wrap
+         例如：flex-flow: row wrap
+flex 定义子项目分配剩余空间 用flex来表示占多少份数
+        默认为0
+align-self 控制子项自己在侧轴上的排列方式
+        align-self属性允许单个项目有与其他项目不一样的对齐方式，可以覆盖 align-items 属性
+        默认值为 auto 表示继承父元素的 align-items 属性  如果没有父元素 则等同于stretch
+order  属性定义项目的排列顺序
+        数值越小 排列月靠前 默认值为0
+        注意： 和 z-index不一样

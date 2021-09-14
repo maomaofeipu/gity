@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src = 'jquery.min.js'></script>
+  <style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <script>
+  // $('div').hide();
+  //1、 等页面DOM加载完毕灾区执行js代码
+  // $(document).ready(function() {
+  //   $('div').hide()}
+  // )
+  //2、 等页面DOM加载完毕灾区执行js代码
+  $(()=>{
+    $('div').hide()
+  })
+  </script>
+  <div></div>
+
+</body>
+</html>
